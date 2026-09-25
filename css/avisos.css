@@ -1,0 +1,99 @@
+/* =========================================================
+   AVISOS.CSS
+   Estilos exclusivos da página avisos.html.
+   Depende de base.css já estar carregado antes deste arquivo.
+   ========================================================= */
+ 
+.secao-avisos {
+  padding: 72px 0;
+}
+ 
+.lista-avisos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 760px;
+}
+ 
+.aviso {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background-color: #f1ece0;
+  border-radius: 12px;
+}
+ 
+.aviso__data {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-creme);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+}
+ 
+.aviso__dia {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+ 
+.aviso__mes {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--cor-dourado-claro);
+}
+ 
+.aviso__categoria {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+ 
+.aviso__categoria--manutencao {
+  background-color: #e3c39a;
+  color: #5a3d1c;
+}
+ 
+.aviso__categoria--assembleia {
+  background-color: #c9d9cd;
+  color: #1f4d3c;
+}
+ 
+.aviso__categoria--geral {
+  background-color: #dfe3e6;
+  color: #3a4247;
+}
+ 
+.aviso__titulo {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-verde-escuro);
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+ 
+.aviso__texto {
+  color: var(--cor-texto-claro);
+  font-size: 0.95rem;
+}
+ 
+/* ---- responsivo ---- */
+@media (max-width: 860px) {
+  .aviso {
+    flex-direction: column;
+  }
+ 
+  .aviso__data {
+    flex-direction: row;
+    gap: 6px;
+    width: fit-content;
+    padding: 4px 12px;
+  }
+}

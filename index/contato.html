@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatos | Residencial Interlagos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/contato.css">
+</head>
+
+<body>
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a href="index.html" class="cabecalho__logo">
+        <span>Residencial<br>Interlagos</span>
+      </a>
+      <button class="menu-botao" id="botaoMenu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu-navegacao" id="menuNavegacao">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="avisos.html">Avisos</a>
+        <a href="contato.html" class="menu-navegacao__link--ativo">Contatos</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===================== CABEÇALHO DA PÁGINA ===================== -->
+  <section class="cabecalho-pagina">
+    <div class="container">
+      <h1 class="cabecalho-pagina__titulo">Contatos</h1>
+      <p class="cabecalho-pagina__texto">Fale com a administração ou agende uma visita ao condomínio.</p>
+    </div>
+  </section>
+  <!-- ===================== LOCALIZAÇÃO ===================== -->
+  <section class="localizacao" id="localizacao">
+    <div class="container localizacao__grade">
+      <div class="localizacao__texto">
+        <h2 class="titulo-secao">Localização</h2>
+        <p>Av. das Nações Unidas, 0000 — Interlagos, São Paulo - SP</p>
+        <p>Próximo à Represa Billings, ao Autódromo de Interlagos e a rotas de fácil acesso à Marginal Pinheiros.</p>
+        <a class="botao botao--contorno"
+          href="https://www.google.com/maps/search/?api=1&query=Interlagos%2C%20S%C3%A3o%20Paulo%20-%20SP"
+          target="_blank" rel="noopener">
+          Ver no mapa
+        </a>
+      </div>
+      <div class="localizacao__mapa" aria-hidden="true">
+        <span>Interlagos, São Paulo</span>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== CONTATO ===================== -->
+  <section class="contato" id="contato">
+    <div class="container contato__grade">
+      <div class="contato__texto">
+        <h2 class="titulo-secao">Fale conosco</h2>
+        <p>Preencha o formulário e nossa equipe entra em contato para agendar sua visita.</p>
+        <ul class="contato__lista">
+          <li>(11) 0000-0000</li>
+          <li>contato@residencialinterlagos.com.br</li>
+        </ul>
+      </div>
+      <form class="formulario-contato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"></textarea>
+        <button type="submit" class="botao botao--escuro">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>&copy; 2026 Residencial Interlagos. Todos os direitos reservados.</p>
+      <nav class="rodape__links">
+        <a href="sobre.html">Sobre nós</a>
+        <a href="avisos.html">Avisos</a>
+        <a href="contato.html">Contatos</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+</body>
+
+</html>

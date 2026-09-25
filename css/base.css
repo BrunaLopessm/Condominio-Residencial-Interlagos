@@ -1,0 +1,300 @@
+/* =========================================================
+   BASE.CSS
+   Estilos usados em TODAS as páginas: cores, reset, cabeçalho,
+   rodapé, botões e o cartão de "diferencial" (lazer).
+   Cada página também carrega o seu próprio CSS (home.css,
+   sobre.css, avisos.css ou contato.css) além deste arquivo.
+   ========================================================= */
+ 
+:root {
+  --cor-verde-escuro: #17392b;
+  --cor-verde: #1f4d3c;
+  --cor-dourado: #d9a866;
+  --cor-dourado-claro: #ecd3a3;
+  --cor-creme: #faf7f0;
+  --cor-texto: #26302a;
+  --cor-texto-claro: #6f7b73;
+ 
+  --fonte-titulo: "Fraunces", serif;
+  --fonte-texto: "Inter", sans-serif;
+ 
+  --largura-maxima: 1120px;
+}
+ 
+/* ---- reset básico ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  background-color: var(--cor-creme);
+}
+ 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+ul {
+  list-style: none;
+}
+ 
+.container {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+ 
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--cor-verde-escuro);
+  margin-bottom: 16px;
+}
+ 
+.titulo-secao--centro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+/* ---- botões reutilizáveis ---- */
+.botao {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+ 
+.botao:hover {
+  transform: translateY(-2px);
+}
+ 
+.botao--claro {
+  background-color: var(--cor-creme);
+  color: var(--cor-verde-escuro);
+}
+ 
+.botao--escuro {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-creme);
+  border: none;
+  cursor: pointer;
+}
+ 
+.botao--contorno {
+  border: 2px solid var(--cor-verde-escuro);
+  color: var(--cor-verde-escuro);
+}
+ 
+/* =========================================================
+   CABEÇALHO (topo, presente em todas as páginas)
+   ========================================================= */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  background-color: var(--cor-creme);
+  border-bottom: 1px solid rgba(23, 57, 43, 0.1);
+  z-index: 10;
+}
+ 
+.cabecalho__conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+ 
+.cabecalho__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  color: var(--cor-verde-escuro);
+  line-height: 1.1;
+  font-size: 0.95rem;
+}
+ 
+.cabecalho__logo img {
+  width: 40px;
+}
+ 
+.menu-navegacao {
+  display: flex;
+  gap: 32px;
+  font-weight: 500;
+}
+ 
+.menu-navegacao a {
+  color: var(--cor-verde-escuro);
+  position: relative;
+}
+ 
+.menu-navegacao a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-dourado);
+  transition: width 0.2s ease;
+}
+ 
+.menu-navegacao a:hover::after {
+  width: 100%;
+}
+ 
+.menu-navegacao__link--ativo {
+  color: var(--cor-dourado);
+}
+ 
+.menu-navegacao__link--ativo::after {
+  width: 100%;
+  background-color: var(--cor-dourado);
+}
+ 
+/* botão "sanduíche" — só aparece no celular */
+.menu-botao {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+ 
+.menu-botao span {
+  display: block;
+  height: 2px;
+  background-color: var(--cor-verde-escuro);
+}
+ 
+/* =========================================================
+   CABEÇALHO DE PÁGINA INTERNA (usado em Sobre, Avisos, Contatos)
+   ========================================================= */
+.cabecalho-pagina {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-creme);
+  padding: 56px 0;
+}
+ 
+.cabecalho-pagina__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 2.25rem;
+}
+ 
+.cabecalho-pagina__texto {
+  color: rgba(250, 247, 240, 0.8);
+  margin-top: 8px;
+}
+ 
+/* =========================================================
+   CARTÃO DE DIFERENCIAL
+   Usado na Home (prévia) e na página Sobre nós (lista completa)
+   ========================================================= */
+.grade-diferenciais {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+ 
+.cartao-diferencial {
+  background-color: var(--cor-creme);
+  border-radius: 12px;
+  padding: 28px;
+  border-top: 3px solid var(--cor-dourado);
+}
+ 
+.cartao-diferencial h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-verde-escuro);
+  margin-bottom: 8px;
+}
+ 
+.cartao-diferencial p {
+  color: var(--cor-texto-claro);
+  font-size: 0.95rem;
+}
+ 
+/* =========================================================
+   RODAPÉ (presente em todas as páginas)
+   ========================================================= */
+.rodape {
+  background-color: #102921;
+  color: rgba(250, 247, 240, 0.7);
+  padding: 28px 0;
+  font-size: 0.9rem;
+}
+ 
+.rodape__conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+ 
+.rodape__links {
+  display: flex;
+  gap: 20px;
+}
+ 
+/* =========================================================
+   RESPONSIVO — telas menores que 860px
+   (só os elementos que pertencem a este arquivo: menu e cartões)
+   ========================================================= */
+@media (max-width: 860px) {
+  .menu-botao {
+    display: flex;
+  }
+ 
+  .menu-navegacao {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-creme);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+ 
+  .menu-navegacao a {
+    padding: 14px;
+    width: 100%;
+    text-align: center;
+  }
+ 
+  .menu-navegacao--aberto {
+    max-height: 260px;
+    border-bottom: 1px solid rgba(23, 57, 43, 0.1);
+  }
+ 
+  .grade-diferenciais {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width: 540px) {
+  .grade-diferenciais {
+    grid-template-columns: 1fr;
+  }
+}

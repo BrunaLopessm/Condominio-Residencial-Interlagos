@@ -1,0 +1,55 @@
+/* =========================================================
+   SOBRE.CSS
+   Estilos exclusivos da página sobre.html.
+   Depende de base.css já estar carregado antes deste arquivo.
+   (o cartão de diferencial usado aqui está em base.css)
+   ========================================================= */
+ 
+.sobre {
+  padding: 88px 0;
+}
+ 
+.sobre__grade {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+ 
+.sobre__texto p {
+  color: var(--cor-texto-claro);
+  margin-bottom: 16px;
+  max-width: 60ch;
+}
+ 
+.sobre__numeros {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-left: 2px solid var(--cor-dourado);
+  padding-left: 24px;
+}
+ 
+.numero {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 2.25rem;
+  color: var(--cor-verde-escuro);
+}
+ 
+.numero-legenda {
+  color: var(--cor-texto-claro);
+  font-size: 0.9rem;
+}
+ 
+.diferenciais {
+  background-color: #f1ece0;
+  padding: 88px 0;
+}
+ 
+/* ---- responsivo ---- */
+@media (max-width: 860px) {
+  .sobre__grade {
+    grid-template-columns: 1fr;
+  }
+}

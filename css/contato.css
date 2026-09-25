@@ -1,0 +1,96 @@
+/* =========================================================
+   CONTATO.CSS
+   Estilos exclusivos da página contato.html.
+   Depende de base.css já estar carregado antes deste arquivo.
+   ========================================================= */
+ 
+/* ---- localização ---- */
+.localizacao {
+  padding: 88px 0;
+}
+ 
+.localizacao__grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+ 
+.localizacao__texto p {
+  color: var(--cor-texto-claro);
+  margin-bottom: 16px;
+}
+ 
+.localizacao__mapa {
+  height: 260px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--cor-verde) 0%, var(--cor-verde-escuro) 100%);
+  color: var(--cor-creme);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+  font-size: 1.1rem;
+}
+ 
+/* ---- formulário de contato ---- */
+.contato {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-creme);
+  padding: 88px 0;
+}
+ 
+.contato .titulo-secao {
+  color: var(--cor-creme);
+}
+ 
+.contato__grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+ 
+.contato__texto p {
+  color: rgba(250, 247, 240, 0.8);
+  margin-bottom: 24px;
+  max-width: 40ch;
+}
+ 
+.contato__lista li {
+  padding: 6px 0;
+  color: var(--cor-dourado-claro);
+}
+ 
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.formulario-contato label {
+  font-size: 0.85rem;
+  color: var(--cor-dourado-claro);
+  margin-top: 12px;
+}
+ 
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--fonte-texto);
+  background-color: rgba(250, 247, 240, 0.95);
+}
+ 
+.formulario-contato button {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+ 
+/* ---- responsivo ---- */
+@media (max-width: 860px) {
+  .localizacao__grade,
+  .contato__grade {
+    grid-template-columns: 1fr;
+  }
+}

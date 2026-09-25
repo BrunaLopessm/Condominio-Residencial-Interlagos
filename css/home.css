@@ -1,0 +1,116 @@
+/* =========================================================
+   HOME.CSS
+   Estilos exclusivos da página index.html (Home).
+   Depende de base.css já estar carregado antes deste arquivo.
+   ========================================================= */
+ 
+/* ---- hero (banner de abertura) ---- */
+.secao-hero {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-creme);
+  padding: 96px 0;
+}
+ 
+.secao-hero__conteudo {
+  max-width: 640px;
+}
+ 
+.hero-eyebrow {
+  color: var(--cor-dourado-claro);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+ 
+.hero-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 2.75rem;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+ 
+.hero-texto {
+  color: rgba(250, 247, 240, 0.85);
+  margin-bottom: 32px;
+  max-width: 52ch;
+}
+ 
+/* ---- resumo sobre o condomínio ---- */
+.resumo {
+  padding: 88px 0;
+}
+ 
+.resumo__grade {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+ 
+.resumo__texto p {
+  color: var(--cor-texto-claro);
+  margin: 16px 0 20px;
+  max-width: 55ch;
+}
+ 
+.link-saiba-mais {
+  font-weight: 600;
+  color: var(--cor-verde-escuro);
+  border-bottom: 2px solid var(--cor-dourado);
+  padding-bottom: 2px;
+}
+ 
+.resumo__numeros {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-left: 2px solid var(--cor-dourado);
+  padding-left: 24px;
+}
+ 
+/* ---- prévia da área de lazer ---- */
+.destaques {
+  background-color: #f1ece0;
+  padding: 88px 0;
+}
+ 
+.destaques__rodape {
+  margin-top: 40px;
+  text-align: center;
+}
+ 
+/* ---- chamada para a página de Avisos ---- */
+.chamada-avisos {
+  padding: 72px 0;
+}
+ 
+.chamada-avisos__conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background-color: var(--cor-dourado-claro);
+  border-radius: 16px;
+  padding: 40px;
+}
+ 
+.chamada-avisos__conteudo p {
+  color: var(--cor-texto);
+  margin-top: 4px;
+}
+ 
+/* ---- responsivo ---- */
+@media (max-width: 860px) {
+  .resumo__grade {
+    grid-template-columns: 1fr;
+  }
+ 
+  .hero-titulo {
+    font-size: 2.1rem;
+  }
+ 
+  .chamada-avisos__conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+}
