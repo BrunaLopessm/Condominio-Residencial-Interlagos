@@ -1,14 +1,20 @@
-/* =========================================================
-   CONTATO.CSS
-   Estilos exclusivos da página contato.html.
-   Depende de base.css já estar carregado antes deste arquivo.
-   ========================================================= */
- 
 /* ---- localização ---- */
 .localizacao {
   padding: 88px 0;
 }
- 
+
+.contato__tx{
+  display: flex;
+}
+
+.contato__tx .botao-whatsapp{
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #394ef3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .localizacao__grade {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -19,18 +25,6 @@
 .localizacao__texto p {
   color: var(--cor-texto-claro);
   margin-bottom: 16px;
-}
- 
-.localizacao__mapa {
-  height: 260px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--cor-verde) 0%, var(--cor-verde-escuro) 100%);
-  color: var(--cor-creme);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--fonte-titulo);
-  font-size: 1.1rem;
 }
  
 /* ---- formulário de contato ---- */
