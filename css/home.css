@@ -5,11 +5,25 @@
    ========================================================= */
  
 /* ---- hero (banner de abertura) ---- */
+
 .secao-hero {
-  background-color: var(--cor-verde-escuro);
-  color: var(--cor-creme);
-  padding: 96px 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.50),
+      rgba(0, 0, 0, 0.50)
+    )
+    url("../img/Gemini_Generated_Image_fn5akvfn5akvfn5a.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }
+
  
 .secao-hero__conteudo {
   max-width: 640px;
