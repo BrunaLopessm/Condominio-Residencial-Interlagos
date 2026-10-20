@@ -1,18 +1,7 @@
-/* ---- localização ---- */
+
+/* ---- LOCALIZAÇÃO ---- */
 .localizacao {
   padding: 88px 0;
-}
-
-.contato__tx{
-  display: flex;
-}
-
-.contato__tx .botao-whatsapp{
-  margin-left: 10px;
-  margin-top: 5px;
-  color: #394ef3;
-  text-decoration: none;
-  font-weight: 500;
 }
 
 .localizacao__grade {
@@ -21,70 +10,196 @@
   gap: 48px;
   align-items: center;
 }
- 
+
 .localizacao__texto p {
   color: var(--cor-texto-claro);
   margin-bottom: 16px;
 }
- 
-/* ---- formulário de contato ---- */
+
+.localizacao__mapa {
+  min-width: 0;
+}
+
+.localizacao__mapa iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ---- CONTATO ---- */
 .contato {
   background-color: var(--cor-verde-escuro);
   color: var(--cor-creme);
   padding: 88px 0;
 }
- 
+
 .contato .titulo-secao {
   color: var(--cor-creme);
 }
- 
+
 .contato__grade {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
 }
- 
+
 .contato__texto p {
   color: rgba(250, 247, 240, 0.8);
   margin-bottom: 24px;
   max-width: 40ch;
 }
- 
+
+/* ---- LISTA DE CONTATOS ---- */
+.contato__lista {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
 .contato__lista li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
   padding: 6px 0;
   color: var(--cor-dourado-claro);
+  overflow-wrap: anywhere;
 }
- 
+
+.contato__lista > li > i {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contato__lista li > a:not(.botao-whatsapp) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contato__lista li > a:not(.botao-whatsapp):hover {
+  text-decoration: underline;
+}
+
+/* ---- WHATSAPP ---- */
+.contato__lista a.botao-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 100%;
+  color: #25D366 !important;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.5;
+
+  transition: color 0.2s ease;
+}
+
+.contato__lista a.botao-whatsapp i {
+  display: inline-block;
+  font-family: "Font Awesome 6 Brands";
+  font-size: 28px;
+  line-height: 1;
+
+  color: #25D366;
+  flex-shrink: 0;
+}
+
+.contato__lista a.botao-whatsapp span {
+  overflow-wrap: anywhere;
+}
+
+.contato__lista a.botao-whatsapp:hover,
+.contato__lista a.botao-whatsapp:hover i {
+  color: #128C7E !important;
+}
+
+.contato__lista a.botao-whatsapp:focus-visible {
+  outline: 2px solid #25D366;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ---- FORMULÁRIO ---- */
 .formulario-contato {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
- 
+
 .formulario-contato label {
   font-size: 0.85rem;
   color: var(--cor-dourado-claro);
   margin-top: 12px;
 }
- 
+
 .formulario-contato input,
 .formulario-contato textarea {
+  width: 100%;
+  box-sizing: border-box;
+
   padding: 12px 14px;
   border-radius: 8px;
   border: none;
+
   font-family: var(--fonte-texto);
+  font-size: 1rem;
+
   background-color: rgba(250, 247, 240, 0.95);
+  color: #222;
 }
- 
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+  outline: 2px solid var(--cor-dourado-claro);
+  outline-offset: 2px;
+}
+
+.formulario-contato textarea {
+  resize: vertical;
+}
+
 .formulario-contato button {
   margin-top: 20px;
   align-self: flex-start;
+  cursor: pointer;
 }
- 
-/* ---- responsivo ---- */
+
+/* ---- RESPONSIVIDADE ---- */
 @media (max-width: 860px) {
   .localizacao__grade,
   .contato__grade {
     grid-template-columns: 1fr;
+  }
+
+  .contato__grade {
+    gap: 40px;
+  }
+
+  .localizacao,
+  .contato {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato__lista a.botao-whatsapp {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contato__lista a.botao-whatsapp i {
+    font-size: 25px;
+  }
+
+  .formulario-contato button {
+    align-self: stretch;
   }
 }

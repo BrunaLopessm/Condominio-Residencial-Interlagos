@@ -1,11 +1,4 @@
-/* =========================================================
-   BASE.CSS
-   Estilos usados em TODAS as páginas: cores, reset, cabeçalho,
-   rodapé, botões e o cartão de "diferencial" (lazer).
-   Cada página também carrega o seu próprio CSS (home.css,
-   sobre.css, avisos.css ou contato.css) além deste arquivo.
-   ========================================================= */
- 
+
 :root {
   --cor-verde-escuro: #17392b;
   --cor-verde: #1f4d3c;
