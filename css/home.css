@@ -1,9 +1,4 @@
-/* =========================================================
-   HOME.CSS
-   Estilos exclusivos da página index.html (Home).
-   Depende de base.css já estar carregado antes deste arquivo.
-   ========================================================= */
- 
+
 /* ---- hero (banner de abertura) ---- */
 
 .secao-hero {
@@ -12,7 +7,7 @@
       rgba(0, 0, 0, 0.50),
       rgba(0, 0, 0, 0.50)
     )
-    url("../img/Gemini_Generated_Image_fn5akvfn5akvfn5a.jpg");
+    url("/img/Gemini_Generated_Image_fn5akvfn5akvfn5a.jpg");
 
   background-size: cover;
   background-position: center;
